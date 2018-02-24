@@ -19,11 +19,9 @@ angular.
         // this.phones = commonServiceSerivice.query();
         this.orderProp = 'age';
         commonServiceSerivice.getList().then(function(response) {
-          debugger
           $scope.restaurant = response.data.restaurants.restaurant;
         })
         commonServiceSerivice.getEvents().then(function(response){
-          debugger
           $scope.eventsList = response.data.EventList;
         })
 
@@ -34,25 +32,21 @@ angular.
         });
 
         $scope.listViewFun = function(){
-          debugger
          $scope.listView = true;
          $scope.Eventview = false;
          $scope.mapView = false;
         }
         $scope.mapViewFun = function(){
-          debugger
          $scope.listView = false;
          $scope.Eventview = false;
          $scope.mapView = true;
         }
         $scope.eventViewFun = function(){
-          debugger
          $scope.listView = false;
          $scope.Eventview = true;
          $scope.mapView = false;
         }
         $scope.modelMap = function(res){
-          debugger
           $scope.moLat = res.latitude;
           $scope.moLon = res.longitude;
           $scope.moName = res.name;
